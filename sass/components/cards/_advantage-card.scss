@@ -1,0 +1,20 @@
+.advantage-card {
+	max-width: 270px;
+}
+
+.advantage-card__img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 270px;
+	height: 120px;
+	margin-bottom: 30px;
+	background-color: getColor("third-bgc-color");
+	border-radius: 4px;
+}
+
+.advantage-card__name {
+	margin-bottom: 10px;
+
+	color: getColor("title-text-color");
+}

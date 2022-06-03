@@ -1,0 +1,135 @@
+.page-footer {
+	background-color: getColor("secondary-bgc-color");
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.page-footer__container {
+	display: flex;
+	align-items: baseline;
+}
+
+/* .address-thumb */
+
+.address-thumb {
+	display: flex;
+	flex-direction: column;
+	margin-right: 70px;
+}
+
+/* logo-footer */
+
+.page-footer__logo {
+	display: flex;
+	color: getColor("primary-bgc-color");
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+/* logo-footer */
+
+.address__list {
+	font-style: normal;
+	display: inline-block;
+
+	/* outline: 4px solid blueviolet; */
+}
+
+.address__item:not(:last-child) {
+	margin-bottom: 9px;
+}
+
+.address__link {
+	display: flex;
+	align-items: center;
+
+	color: rgba(255, 255, 255, 0.6);
+	font-weight: 400;
+	line-height: 1.71;
+	letter-spacing: 0.02em;
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&--active:focus,
+	&--active:hover {
+		color: getColor("prim-logo-text-color");
+	}
+}
+
+.address__link--decoration {
+	color: getColor("primary-bgc-color");
+	line-height: 1.71;
+	margin-left: 0;
+}
+
+/* join-thumb */
+
+.join-thumb {
+	display: inline-block;
+}
+
+.join-thumb__title {
+	display: inline-block;
+	color: getColor("primary-bgc-color");
+	font-weight: 700;
+	line-height: 1.14;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.social__link--decoration {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 44px;
+	height: 44px;
+
+	color: getColor("primary-bgc-color");
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 50%;
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.newsletter {
+	display: flex;
+	flex-direction: column;
+	width: 570px;
+	margin-left: auto;
+}
+
+.newsletter__title {
+	color: getColor("primary-bgc-color");
+	font-weight: 700;
+	line-height: 1.14;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.newsletter__form {
+	display: flex;
+}
+
+.newsletter__input {
+	margin-right: 12px;
+	padding: 15px 16px;
+	width: 360px;
+
+	font-size: $font-medium;
+	line-height: 1.25;
+	letter-spacing: 0.03em;
+
+	color: rgba(255, 255, 255, 0.6);
+	background-color: getColor("secondary-bgc-color");
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+	border-radius: 4px;
+
+	transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:focus {
+		border: 1px solid getColor("prim-logo-text-color");
+		border-radius: 4px;
+		outline: transparent;
+	}
+}

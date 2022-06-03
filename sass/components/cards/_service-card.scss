@@ -1,0 +1,18 @@
+.service-card {
+	position: relative;
+}
+
+.service-card__name {
+	position: absolute;
+
+	bottom: 0;
+	left: 0;
+	height: 70px;
+	width: 100%;
+
+	padding: 27px 10px;
+
+	text-align: center;
+	color: getColor("primary-bgc-color");
+	background-color: rgba(47, 48, 58, 0.8);
+}

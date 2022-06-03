@@ -1,0 +1,27 @@
+$colors: (
+	"primary-text-color": #757575,
+	"title-text-color": #212121,
+	"prim-logo-text-color": #2196f3,
+	"sec-logo-text-color": #000000,
+	"primary-bgc-color": #ffffff,
+	"secondary-bgc-color": #2f303a,
+	"third-bgc-color": #f5f4fa,
+	"icon-fill-color": #afb1b8,
+	"primary-btn-bgc-cl": #2196f3,
+	"secondary-btn-bgc-cl": #f5f4fa,
+	"prim-hover-btn-bgc-cl": #188ce8,
+	"sec-hover-btn-bgc-cl": #2196f3,
+	"prim-btn-cl": #ffffff,
+	"secondary-btn-cl": #212121,
+	"overlay-bgc-color": rgba(33, 150, 243, 0.9),
+);
+
+@function getColor($key) {
+	@return map-get($colors, $key);
+}
+
+// text
+$font-small: 12px;
+$font-medium: 16px;
+$font-large: 18px;
+$font-ultra: 36px;
