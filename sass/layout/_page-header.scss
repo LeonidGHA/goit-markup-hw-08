@@ -1,24 +1,32 @@
 .page-header {
 	border-bottom: 1px solid #ececec;
-
-	&__container {
-		display: flex;
-		align-items: center;
-	}
 }
 
 .page-header__container {
-	position: relative;
-	padding: 10px;
+	display: flex;
+	align-items: center;
+
+	@media screen and (max-width: 767px) {
+		position: relative;
+		padding: 10px;
+
+		justify-content: space-between;
+	}
 }
 
 .menu-container {
+	display: flex;
+
 	@media screen and (max-width: 767px) {
 		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
 		min-height: 796px;
+
+		flex-direction: column;
+
+		padding: 48px 40px;
 
 		opacity: 0;
 		visibility: hidden;
@@ -36,7 +44,8 @@
 	}
 
 	@media screen and (min-width: 768px) {
-		display: flex;
+		flex-direction: row;
+		flex-grow: 1;
 		align-items: center;
 		justify-content: center;
 	}
@@ -44,12 +53,11 @@
 
 .navigation__list {
 	display: flex;
-	@media screen and (min-width: 480px) {
+	@media screen and (max-width: 767px) {
 		flex-direction: column;
 	}
 
 	@media screen and (min-width: 768px) {
-		flex-direction: row;
 		margin-left: 88px;
 	}
 	@media screen and (min-width: 1200px) {
@@ -68,6 +76,7 @@
 }
 
 .navigation__link {
+	display: block;
 	color: getColor("title-text-color");
 	font-weight: 500;
 	font-size: 40px;
@@ -81,22 +90,16 @@
 		color: getColor("prim-logo-text-color");
 	}
 
-	@media screen and (min-width: 480px) {
-		flex-direction: column;
+	&--current {
+		color: getColor("prim-logo-text-color");
 	}
 
 	@media screen and (min-width: 768px) {
-		flex-direction: row;
-		display: block;
 		padding-top: 32px;
 		padding-bottom: 32px;
 
 		font-size: 14px;
 		line-height: 1.14;
-
-		&--current {
-			color: getColor("prim-logo-text-color");
-		}
 
 		&--current::after {
 			display: block;
@@ -118,42 +121,126 @@
 
 .contact {
 	display: flex;
-}
+	flex-direction: column-reverse;
 
-.page-header__contact {
-	margin-left: auto;
+	@media screen and (max-width: 767px) {
+		margin-top: auto;
+		margin-bottom: 64px;
+	}
+
+	@media screen and (min-width: 768px) {
+		flex-direction: column;
+		margin-left: auto;
+	}
+
+	@media screen and (min-width: 1200px) {
+		flex-direction: row;
+	}
 }
 
 .contact__item {
-	&:not(:last-child) {
-		margin-right: 50px;
+	@media screen and (max-width: 767px) {
+		&:not(:first-child) {
+			margin-bottom: 32px;
+		}
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+
+	@media screen and (min-width: 1200px) {
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
 	}
 }
 
 .contact__link {
-	display: flex;
-	align-items: center;
-
 	color: getColor("primary-text-color");
 	font-weight: 500;
-	line-height: 1.14;
+	font-size: 24px;
+	line-height: 1.16;
 	letter-spacing: 0.02em;
 
 	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-	&--active {
-		display: flex;
-		padding-top: 32px;
-		padding-bottom: 32px;
-	}
 
 	&:hover,
 	&:focus {
 		color: getColor("prim-logo-text-color");
 	}
+
+	@media screen and (max-width: 767px) {
+		&--resize {
+			font-size: 34px;
+			line-height: 1.17;
+
+			color: getColor("prim-logo-text-color");
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+		display: flex;
+		align-items: center;
+
+		font-size: 12px;
+		line-height: 1.16;
+	}
+
+	@media screen and (min-width: 1200px) {
+		padding-top: 32px;
+		padding-bottom: 32px;
+
+		flex-direction: row;
+
+		font-size: 14px;
+		line-height: 1.14;
+
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+	}
 }
 
 .contact__icon {
-	margin-right: 10px;
-	fill: currentColor;
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+
+	@media screen and (min-width: 768px) {
+		margin-right: 8px;
+		fill: currentColor;
+	}
+
+	@media screen and (min-width: 1200px) {
+		margin-right: 10px;
+	}
+}
+
+.header-social__list {
+	display: flex;
+
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
+}
+
+.header-social__item {
+	&:not(:last-child) {
+		border-right: 1px solid rgba(33, 33, 33, 0.2);
+		padding-right: 10px;
+	}
+	&:not(:first-child) {
+		padding-left: 10px;
+	}
+}
+
+.header-social__link {
+	font-size: 18px;
+	line-height: 1.22;
+	letter-spacing: 0.02em;
+
+	color: getColor("prim-logo-text-color");
 }
