@@ -1,6 +1,6 @@
 .hero {
-	padding-top: 200px;
-	padding-bottom: 200px;
+	padding-top: 118px;
+	padding-bottom: 118px;
 	align-items: center;
 	text-align: center;
 	margin-left: auto;
@@ -11,20 +11,31 @@
 	background-repeat: no-repeat, no-repeat;
 	background-position: center, center;
 	background-size: cover, cover;
+
+	@media screen and (min-width: 1200px) {
+		padding-top: 200px;
+		padding-bottom: 200px;
+	}
 }
 
 .hero__title {
-	max-width: 696px;
+	max-width: 360px;
 	margin-right: auto;
 	margin-left: auto;
 	margin-bottom: 30px;
 
 	color: getColor("primary-bgc-color");
 	font-weight: 900;
-	font-size: 44px;
-	line-height: 1.36;
+	font-size: 26px;
+	line-height: 1.62;
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
+
+	@media screen and (min-width: 1200px) {
+		max-width: 696px;
+		font-size: 44px;
+		line-height: 1.36;
+	}
 }
 
 /* Преимущества */
@@ -33,10 +44,16 @@
 }
 
 .advantage__list {
-	display: flex;
+	@media screen and (min-width: 768px) {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -15px;
+	}
 
-	& .advantage-card:not(:last-child) {
-		margin-right: 30px;
+	@media screen and (min-width: 1200px) {
+		& .advantage-card:not(:last-child) {
+			margin-right: 30px;
+		}
 	}
 }
 /* Услуги */

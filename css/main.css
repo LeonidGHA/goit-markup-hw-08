@@ -124,9 +124,9 @@ img {
 }
 
 .button-menu {
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: relative;
+  top: 0px;
+  right: 0px;
   z-index: 5;
   display: inline-flex;
   margin: 0;
@@ -290,15 +290,37 @@ img {
   transform: translateY(0);
 }
 
-.advantage-card {
-  max-width: 270px;
+@media screen and (max-width: 767px) {
+  .advantage-card {
+    max-width: 450px;
+  }
+  .advantage-card:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .advantage-card {
+    max-width: 354px;
+  }
+  .advantage-card:not(:nth-child(2n)) {
+    margin-right: 30px;
+  }
+  .advantage-card:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantage-card {
+    max-width: 270px;
+  }
 }
 
 .advantage-card__img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
   height: 120px;
   margin-bottom: 30px;
   background-color: #f5f4fa;
@@ -559,8 +581,15 @@ img {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .page-header {
@@ -944,7 +973,6 @@ img {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   /* outline: 4px solid indigo; */
@@ -969,8 +997,8 @@ img {
 }
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   align-items: center;
   text-align: center;
   margin-left: auto;
@@ -983,17 +1011,32 @@ img {
   background-size: cover, cover;
 }
 
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+
 .hero__title {
-  max-width: 696px;
+  max-width: 360px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
   color: #ffffff;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 /* Преимущества */
@@ -1001,12 +1044,18 @@ img {
   padding-bottom: 0;
 }
 
-.advantage__list {
-  display: flex;
+@media screen and (min-width: 768px) {
+  .advantage__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
-.advantage__list .advantage-card:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 1200px) {
+  .advantage__list .advantage-card:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 /* Услуги */
