@@ -22,8 +22,8 @@
 	left: 50%;
 	transform: translate(-50%, -50%) scale(1);
 
-	min-width: 528px;
-	min-height: 581px;
+	min-width: 450px;
+	min-height: 609px;
 
 	background-color: getColor("primary-bgc-color");
 
@@ -31,6 +31,11 @@
 
 	.backdrop--is-hidden & {
 		transform: translate(-50%, -50%) scale(0);
+	}
+
+	@media screen and (min-width: 1200px) {
+		min-width: 528px;
+		min-height: 581px;
 	}
 }
 
@@ -175,7 +180,7 @@
 .label__checkbox {
 	position: relative;
 	display: block;
-	margin-right: 8px;
+	margin-right: 7px;
 	width: 16px;
 	height: 15px;
 	border: 2px solid #212121;
@@ -201,11 +206,16 @@
 }
 
 .label__name--static {
-	font-size: 14px;
-	line-height: 1.46;
+	font-size: 12px;
+	line-height: 1.16;
 	letter-spacing: 0.03em;
 	color: getColor("primary-text-color");
 	margin-bottom: 0;
+
+	@media screen and (min-width: 1200px) {
+		font-size: 14px;
+		line-height: 1.71;
+	}
 }
 
 .form__button {
