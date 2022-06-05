@@ -44,9 +44,16 @@ ul {
   margin-top: 0;
   margin-bottom: 50px;
   color: #212121;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.17;
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .section__title {
+    font-size: 36px;
+    line-height: 1.16;
+  }
 }
 
 .subtitle {
@@ -156,22 +163,45 @@ img {
   transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.button-menu.is-open .icon-close {
+  opacity: 1;
+}
+
 .button-menu.is-open .icon-menu {
   opacity: 0;
   transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-menu.is-open .icon-close {
-  opacity: 1;
-}
-
 .team__card {
-  display: inline-block;
-  width: 270px;
+  display: block;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   /* outline: 4px solid blueviolet; */
+}
+
+@media screen and (max-width: 767px) {
+  .team__card:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team__card {
+    width: 354px;
+  }
+  .team__card:not(:nth-child(2n)) {
+    margin-right: 30px;
+  }
+  .team__card:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__card {
+    max-width: 270px;
+  }
 }
 
 .team__description {
@@ -198,12 +228,38 @@ img {
   display: flex;
 }
 
+@media screen and (max-width: 767px) {
+  .clients-card {
+    width: 210px;
+    flex-basis: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .clients-card {
+    width: 226px;
+  }
+  .clients-card:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+  .clients-card:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-card {
+    width: 170px;
+  }
+}
+
 .clients-card__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
-  height: 94px;
+  width: 100%;
+  height: 92px;
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -855,14 +911,46 @@ img {
 
 .page-footer__container {
   display: flex;
-  align-items: baseline;
+}
+
+@media screen and (max-width: 767px) {
+  .page-footer__container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .page-footer__container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-footer__container {
+    align-items: baseline;
+  }
 }
 
 /* .address-thumb */
 .address-thumb {
   display: flex;
   flex-direction: column;
-  margin-right: 70px;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .address-thumb {
+    margin-bottom: 70px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address-thumb {
+    align-items: flex-start;
+    margin-right: 70px;
+  }
 }
 
 /* logo-footer */
@@ -880,8 +968,26 @@ img {
   /* outline: 4px solid blueviolet; */
 }
 
+.address__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .address__item:not(:last-child) {
   margin-bottom: 9px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .address__item {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address__item {
+    align-items: flex-start;
+  }
 }
 
 .address__link {
@@ -906,7 +1012,21 @@ img {
 
 /* join-thumb */
 .join-thumb {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .join-thumb {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .join-thumb {
+    align-items: flex-start;
+  }
 }
 
 .join-thumb__title {
@@ -933,8 +1053,14 @@ img {
 .newsletter {
   display: flex;
   flex-direction: column;
-  width: 570px;
-  margin-left: auto;
+  align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .newsletter {
+    align-items: flex-start;
+    margin-left: auto;
+  }
 }
 
 .newsletter__title {
@@ -947,19 +1073,26 @@ img {
 
 .newsletter__form {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .newsletter__form {
+    flex-direction: row;
+  }
 }
 
 .newsletter__input {
-  margin-right: 12px;
   padding: 15px 16px;
-  width: 360px;
+  max-width: 450px;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   background-color: #2f303a;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -968,6 +1101,20 @@ img {
   border: 1px solid #2196f3;
   border-radius: 4px;
   outline: transparent;
+}
+
+@media screen and (max-width: 1199px) {
+  .newsletter__input {
+    margin-bottom: 20px;
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .newsletter__input {
+    margin-right: 12px;
+    width: 358px;
+  }
 }
 
 .container {
@@ -1040,15 +1187,16 @@ img {
 }
 
 /* Преимущества */
-.advantage {
-  padding-bottom: 0;
+@media screen and (min-width: 1200px) {
+  .advantage {
+    padding-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .advantage__list {
     display: flex;
     flex-wrap: wrap;
-    margin: -15px;
   }
 }
 
@@ -1059,6 +1207,12 @@ img {
 }
 
 /* Услуги */
+@media screen and (max-width: 1199px) {
+  .service {
+    display: none;
+  }
+}
+
 .service__list {
   display: flex;
 }
@@ -1076,21 +1230,30 @@ img {
   background-color: #f5f4fa;
 }
 
-.team__list {
-  display: flex;
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
-.team__list .team__card:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 1200px) {
+  .team__list .team__card:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 /* Постоянные клиенты */
 .clients__list {
   display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
 }
 
-.clients__list .clients-card:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 1200px) {
+  .clients__list .clients-card:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .filters__title {

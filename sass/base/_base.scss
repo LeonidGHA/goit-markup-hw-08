@@ -45,9 +45,13 @@ ul {
 	margin-bottom: 50px;
 
 	color: getColor("title-text-color");
-	font-size: $font-ultra;
-	line-height: 1.16;
+	font-size: 28px;
+	line-height: 1.17;
 	text-align: center;
+	@media screen and (min-width: 1200px) {
+		font-size: $font-ultra;
+		line-height: 1.16;
+	}
 }
 
 .subtitle {

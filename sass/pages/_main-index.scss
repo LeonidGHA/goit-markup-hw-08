@@ -40,14 +40,15 @@
 
 /* Преимущества */
 .advantage {
-	padding-bottom: 0;
+	@media screen and (min-width: 1200px) {
+		padding-bottom: 0;
+	}
 }
 
 .advantage__list {
 	@media screen and (min-width: 768px) {
 		display: flex;
 		flex-wrap: wrap;
-		margin: -15px;
 	}
 
 	@media screen and (min-width: 1200px) {
@@ -57,6 +58,12 @@
 	}
 }
 /* Услуги */
+
+.service {
+	@media screen and (max-width: 1199px) {
+		display: none;
+	}
+}
 
 .service__list {
 	display: flex;
@@ -76,10 +83,15 @@
 }
 
 .team__list {
-	display: flex;
+	@media screen and (min-width: 768px) {
+		display: flex;
+		flex-wrap: wrap;
+	}
 
-	& .team__card:not(:last-child) {
-		margin-right: 30px;
+	@media screen and (min-width: 1200px) {
+		& .team__card:not(:last-child) {
+			margin-right: 30px;
+		}
 	}
 }
 
@@ -87,8 +99,12 @@
 
 .clients__list {
 	display: flex;
+	flex-wrap: wrap;
+	margin: -15px;
 
-	& .clients-card:not(:last-child) {
-		margin-right: 30px;
+	@media screen and (min-width: 1200px) {
+		& .clients-card:not(:last-child) {
+			margin-right: 30px;
+		}
 	}
 }

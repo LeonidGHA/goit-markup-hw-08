@@ -6,7 +6,20 @@
 
 .page-footer__container {
 	display: flex;
-	align-items: baseline;
+
+	@media screen and (max-width: 767px) {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	@media screen and (min-width: 1200px) {
+		align-items: baseline;
+	}
 }
 
 /* .address-thumb */
@@ -14,7 +27,16 @@
 .address-thumb {
 	display: flex;
 	flex-direction: column;
-	margin-right: 70px;
+	align-items: center;
+
+	@media screen and (max-width: 767px) {
+		margin-bottom: 70px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		align-items: flex-start;
+		margin-right: 70px;
+	}
 }
 
 /* logo-footer */
@@ -35,8 +57,20 @@
 	/* outline: 4px solid blueviolet; */
 }
 
-.address__item:not(:last-child) {
-	margin-bottom: 9px;
+.address__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&:not(:last-child) {
+		margin-bottom: 9px;
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		margin-bottom: 60px;
+	}
+	@media screen and (min-width: 1200px) {
+		align-items: flex-start;
+	}
 }
 
 .address__link {
@@ -65,7 +99,16 @@
 /* join-thumb */
 
 .join-thumb {
-	display: inline-block;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@media screen and (max-width: 767px) {
+		margin-bottom: 60px;
+	}
+	@media screen and (min-width: 1200px) {
+		align-items: flex-start;
+	}
 }
 
 .join-thumb__title {
@@ -91,11 +134,16 @@
 	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+// newsletter
+
 .newsletter {
 	display: flex;
 	flex-direction: column;
-	width: 570px;
-	margin-left: auto;
+	align-items: center;
+	@media screen and (min-width: 1200px) {
+		align-items: flex-start;
+		margin-left: auto;
+	}
 }
 
 .newsletter__title {
@@ -108,13 +156,17 @@
 
 .newsletter__form {
 	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@media screen and (min-width: 1200px) {
+		flex-direction: row;
+	}
 }
 
 .newsletter__input {
-	margin-right: 12px;
 	padding: 15px 16px;
-	width: 360px;
-
+	max-width: 450px;
 	font-size: $font-medium;
 	line-height: 1.25;
 	letter-spacing: 0.03em;
@@ -122,7 +174,7 @@
 	color: rgba(255, 255, 255, 0.6);
 	background-color: getColor("secondary-bgc-color");
 	border: 1px solid rgba(255, 255, 255, 0.3);
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+	box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
 	border-radius: 4px;
 
 	transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -131,5 +183,15 @@
 		border: 1px solid getColor("prim-logo-text-color");
 		border-radius: 4px;
 		outline: transparent;
+	}
+
+	@media screen and (max-width: 1199px) {
+		margin-bottom: 20px;
+		width: 450px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		margin-right: 12px;
+		width: 358px;
 	}
 }
