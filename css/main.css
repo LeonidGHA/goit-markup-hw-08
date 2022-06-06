@@ -276,13 +276,29 @@ img {
 }
 
 .project-card {
-  display: flex;
-  margin-right: 30px;
+  max-width: 450px;
   margin-bottom: 30px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .project-card {
+    max-width: 354px;
+    flex-basis: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .project-card {
+    margin-right: 30px;
+    max-width: 370px;
+  }
+}
+
 .project-card__link {
-  width: 370px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -320,6 +336,7 @@ img {
 }
 
 .project-card__item {
+  flex-grow: 1;
   padding: 20px 24px;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
@@ -385,7 +402,14 @@ img {
 
 .advantage-card__name {
   margin-bottom: 10px;
+  text-align: center;
   color: #212121;
+}
+
+@media screen and (min-width: 768px) {
+  .advantage-card__name {
+    text-align: left;
+  }
 }
 
 .service-card {
@@ -1270,7 +1294,12 @@ img {
 .clients__list {
   display: flex;
   flex-wrap: wrap;
-  margin: -15px;
+}
+
+@media screen and (max-width: 767px) {
+  .clients__list {
+    margin: -15px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1291,14 +1320,24 @@ img {
 
 .filters__list {
   margin-bottom: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  align-content: center;
-  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .filters__list {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .filters__item {
   display: inline-block;
+}
+
+@media screen and (max-width: 767px) {
+  .filters__item {
+    margin-bottom: 15px;
+  }
 }
 
 .filters__item:not(:last-child) {
@@ -1333,16 +1372,25 @@ img {
 }
 
 /* Projects */
-.project__list {
-  display: flex;
-  flex-wrap: wrap;
+@media screen and (min-width: 768px) {
+  .project__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
-.project__list .project-card:nth-child(3n) {
-  margin-right: 0;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .project__list {
+    margin: -15px;
+  }
 }
 
-.project__list .project-card:nth-last-child(-n + 3) {
-  margin-bottom: 0;
+@media screen and (min-width: 1200px) {
+  .project__list .project-card:nth-child(3n) {
+    margin-right: 0;
+  }
+  .project__list .project-card:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */

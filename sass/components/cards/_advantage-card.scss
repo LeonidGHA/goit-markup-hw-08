@@ -35,6 +35,10 @@
 
 .advantage-card__name {
 	margin-bottom: 10px;
-
+	text-align: center;
 	color: getColor("title-text-color");
+
+	@media screen and (min-width: 768px) {
+		text-align: left;
+	}
 }
