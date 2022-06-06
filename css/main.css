@@ -158,10 +158,6 @@ img {
   fill: currentColor;
 }
 
-.button-menu .icon-menu {
-  opacity: 1;
-}
-
 .button-menu .icon-close {
   opacity: 0;
   transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -935,7 +931,6 @@ img {
 @media screen and (max-width: 767px) {
   .page-footer__container {
     flex-direction: column;
-    align-items: center;
   }
 }
 
@@ -1073,6 +1068,8 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-basis: 450px;
+  max-width: 450px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1092,6 +1089,7 @@ img {
 
 .newsletter__form {
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
 }
@@ -1104,7 +1102,7 @@ img {
 
 .newsletter__input {
   padding: 15px 16px;
-  max-width: 450px;
+  width: 100%;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
@@ -1125,14 +1123,12 @@ img {
 @media screen and (max-width: 1199px) {
   .newsletter__input {
     margin-bottom: 20px;
-    width: 450px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .newsletter__input {
     margin-right: 12px;
-    width: 358px;
   }
 }
 
