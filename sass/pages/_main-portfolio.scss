@@ -34,7 +34,7 @@
 .filters__button {
 	padding: 6px 22px;
 
-	width: auto;
+	min-width: auto;
 	color: getColor("title-text-color");
 	background-color: getColor("secondary-btn-bgc-cl");
 	font-weight: 500;
