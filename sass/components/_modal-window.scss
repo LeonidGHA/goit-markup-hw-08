@@ -42,6 +42,7 @@
 
 .modal__button {
 	position: absolute;
+	min-width: auto;
 	top: 8px;
 	right: 8px;
 	padding: 0;
@@ -182,7 +183,7 @@
 	position: relative;
 	display: block;
 	margin-right: 7px;
-	width: 16px;
+	min-width: 16px;
 	height: 15px;
 	border: 2px solid #212121;
 	border-radius: 4px;
