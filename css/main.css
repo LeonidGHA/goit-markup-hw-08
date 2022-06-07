@@ -154,6 +154,12 @@ img {
   }
 }
 
+.button-menu.is-open {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
 .button-menu__icon {
   fill: currentColor;
 }
@@ -764,6 +770,12 @@ img {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .navigation__item {
+    margin-bottom: 32px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .navigation__item {
     position: relative;
@@ -868,7 +880,15 @@ img {
   color: #2196f3;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
+  .contact__link--resize {
+    font-size: 26px;
+    line-height: 1.17;
+    color: #2196f3;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .contact__link--resize {
     font-size: 34px;
     line-height: 1.17;
@@ -930,18 +950,35 @@ img {
 
 .header-social__item:not(:last-child) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
-  padding-right: 10px;
+  padding-right: 5px;
 }
 
 .header-social__item:not(:first-child) {
-  padding-left: 10px;
+  padding-left: 5px;
+}
+
+@media screen and (min-width: 480px) {
+  .header-social__item:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding-right: 10px;
+  }
+  .header-social__item:not(:first-child) {
+    padding-left: 10px;
+  }
 }
 
 .header-social__link {
-  font-size: 18px;
-  line-height: 1.22;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: #2196f3;
+}
+
+@media screen and (min-width: 480px) {
+  .header-social__link {
+    font-size: 18px;
+    line-height: 1.22;
+  }
 }
 
 .page-footer {
@@ -1224,7 +1261,7 @@ img {
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg/imgdesc@2x.jpg);
+    background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg/mgdesc@2x.jpg);
   }
 }
 
